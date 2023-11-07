@@ -123,6 +123,7 @@
             this.btn_SignUp.TabIndex = 2;
             this.btn_SignUp.Text = "Đăng Ký";
             this.btn_SignUp.UseVisualStyleBackColor = true;
+            this.btn_SignUp.Click += new System.EventHandler(this.btn_SignUp_Click);
             // 
             // Login
             // 

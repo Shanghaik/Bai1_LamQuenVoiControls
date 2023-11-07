@@ -44,7 +44,7 @@
             this.rb_Male = new System.Windows.Forms.RadioButton();
             this.rb_Female = new System.Windows.Forms.RadioButton();
             this.dtp_DOB = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bt_Upload = new System.Windows.Forms.Button();
             this.btn_SignUp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Avatar)).BeginInit();
             this.SuspendLayout();
@@ -96,11 +96,13 @@
             // 
             // ptb_Avatar
             // 
+            this.ptb_Avatar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ptb_Avatar.Location = new System.Drawing.Point(570, 26);
             this.ptb_Avatar.Name = "ptb_Avatar";
             this.ptb_Avatar.Size = new System.Drawing.Size(283, 292);
             this.ptb_Avatar.TabIndex = 3;
             this.ptb_Avatar.TabStop = false;
+            this.ptb_Avatar.Click += new System.EventHandler(this.ptb_Avatar_Click);
             // 
             // tb_Name
             // 
@@ -184,14 +186,14 @@
             this.dtp_DOB.Size = new System.Drawing.Size(326, 27);
             this.dtp_DOB.TabIndex = 7;
             // 
-            // button1
+            // bt_Upload
             // 
-            this.button1.Location = new System.Drawing.Point(669, 324);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Up ảnh";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_Upload.Location = new System.Drawing.Point(669, 324);
+            this.bt_Upload.Name = "bt_Upload";
+            this.bt_Upload.Size = new System.Drawing.Size(94, 29);
+            this.bt_Upload.TabIndex = 8;
+            this.bt_Upload.Text = "Up ảnh";
+            this.bt_Upload.UseVisualStyleBackColor = true;
             // 
             // btn_SignUp
             // 
@@ -201,6 +203,7 @@
             this.btn_SignUp.TabIndex = 9;
             this.btn_SignUp.Text = "Đăng ký";
             this.btn_SignUp.UseVisualStyleBackColor = true;
+            this.btn_SignUp.Click += new System.EventHandler(this.btn_SignUp_Click);
             // 
             // DangKy
             // 
@@ -208,7 +211,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 471);
             this.Controls.Add(this.btn_SignUp);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_Upload);
             this.Controls.Add(this.dtp_DOB);
             this.Controls.Add(this.rb_Female);
             this.Controls.Add(this.rb_Male);
@@ -251,7 +254,7 @@
         private RadioButton rb_Male;
         private RadioButton rb_Female;
         private DateTimePicker dtp_DOB;
-        private Button button1;
+        private Button bt_Upload;
         private Button btn_SignUp;
     }
 }

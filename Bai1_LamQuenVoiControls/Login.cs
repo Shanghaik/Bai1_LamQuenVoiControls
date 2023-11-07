@@ -65,5 +65,10 @@ namespace Bai1_LamQuenVoiControls
                 tbt_Password.PasswordChar = '\0';
             }else tbt_Password.PasswordChar = '*';
         }
+        private void btn_SignUp_Click(object sender, EventArgs e)
+        {
+            DangKy dk = new DangKy();
+            dk.ShowDialog();
+        }
     }
 }
