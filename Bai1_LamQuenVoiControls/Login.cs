@@ -46,24 +46,27 @@ namespace Bai1_LamQuenVoiControls
             // Password chứa Chữ in hoa
             // Check vào checkBox tôi là người máy
             // => Hiển thị ra Message đăng nhập thành công
-            if (tbt_Username.Text.Length > 8
-                && tbt_Password.Text.ToLower() != tbt_Password.Text
-                && cb_Robot.Checked)
+            string username = tbt_Username.Text; string password = tbt_Password.Text;
+            Account account = Services.CheckLogin(username, password);
+            if (username.Length > 8 && password.ToLower() != password 
+                && account != null && cb_Robot.Checked)
             {
                 MessageBox.Show("Đặng nhập thành công");
                 // Khi đăng nhập thành công ta khởi tạo 1 Đối tượng là Form hiển thị
                 // với tham số username được lấy từ TextBox Username vừa nhập
-                HienThi hienthi = new HienThi(tbt_Username.Text);
+                HienThi hienthi = new HienThi(account);
                 hienthi.ShowDialog();
-            }else MessageBox.Show("Đặng nhập thất bại, hãy kiểm tra lại");
+            }
+            else MessageBox.Show("Đặng nhập thất bại, hãy kiểm tra lại");
         }
 
         private void cb_ShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            if(cb_ShowPass.Checked)
+            if (cb_ShowPass.Checked)
             {
                 tbt_Password.PasswordChar = '\0';
-            }else tbt_Password.PasswordChar = '*';
+            }
+            else tbt_Password.PasswordChar = '*';
         }
         private void btn_SignUp_Click(object sender, EventArgs e)
         {

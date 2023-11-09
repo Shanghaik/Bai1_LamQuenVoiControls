@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bai1_LamQuenVoiControls
 {
-    internal class Account
+    public class Account
     {
         public string Name { get; set; }
         public string Address { get; set; }
